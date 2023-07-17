@@ -49,73 +49,34 @@ npm start
 
 ### Item List
 
-- URL: `/api/items`
+- URL: `/api/coins`
 - Method: `GET`
-- Description: Getting item list information from the Mercado Libre API based on search parameters.
+- Description: Getting currencies list information from the Coingecko API based on search parameters.
 - Query Parameters:
-- - `search` (Required) The search query
-- - `firstname` (Required) Firstname for sign
-- - `lastname` (Required) Lastname for sign
+- - `?` (Required) ...
+- - `?` (Optional) ...
 - Body:
 
 ```JSON
 {
-  "author": {
-    "firstname": "John",
-    "lastname": "Doe"
-  },
-  "categories": ["Category1", "Category2", "Category3"],
-  "items": [
-    {
-      "id": "item1",
-      "title": "Item 1",
-      "picture": "item1.jpg",
-      "condition": "New",
-      "free_shipping": true,
-      "place": "State",
-      "price": {
-        "currency": "$",
-        "amount": 10,
-        "decimals": 0
-      }
-    },
-    // ...
-  ]
+
 }
 ```
 
 ### Item Detail
 
-- URL: `/api/items/:id`
+- URL: `/api/coins/:id`
 - Method: `GET`
-- Description: Getting item detail information from the Mercado Libre API based on the item ID.
+- Description: Getting item detail information from the Coingecko API based on the item ID.
 - Query Parameters:
-- - `firstname` (Required) Firstname for sign
-- - `lastname` (Required) Lastname for sign
+- - `?` (Required) ...
+- - `?` (Optional) ...
 
 - Body:
 
 ```JSON
 {
-  "author": {
-    "firstname": "John",
-    "lastname": "Doe"
-  },
-  "categories": ["Category1", "Category2", "Category3"],
-  "item": {
-    "id": "item1",
-    "title": "Item 1",
-    "picture": "item1.jpg",
-    "condition": "New",
-    "free_shipping": true,
-    "sold_quantity": 10,
-    "description": "Item description",
-    "price": {
-      "currency": "$",
-      "amount": 10,
-      "decimals": 0
-    }
-  }
+
 }
 ```
 

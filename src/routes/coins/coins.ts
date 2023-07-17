@@ -43,7 +43,7 @@ router.get("/api/coins", async (req: Request, res: Response) => {
  * @param {Response} res - Express Response object.
  * @returns {Promise<void>} Promise that resolves once the coin detail information is retrieved.
  */
-router.get("/api/items/:id", async (req: Request, res: Response) => {
+router.get("/api/coins/:id", async (req: Request, res: Response) => {
   const { id } = req.params;
 });
 
