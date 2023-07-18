@@ -1,7 +1,7 @@
 <h1 align="center">
   <br>
   <img src="https://raw.githubusercontent.com/martinbobbio/app-challenge-lemon/master/assets/images/lemon-logo.png" width="200">
-  <br><br><br>
+  <br><br>
   <a href="https://backend-challenge-lemon.vercel.app/">
   Challenge Lemon - Backend
   </a>
