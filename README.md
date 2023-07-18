@@ -39,7 +39,7 @@ npm start
 
 4. The API will be accessible at http://localhost:3000/api.
 
-### Item List
+### Coin List + Search
 
 - URL: `/api/coins`
 - Method: `GET`
@@ -83,7 +83,7 @@ npm start
 ]
 ```
 
-### Item Detail
+### Coin Detail
 
 - URL: `/api/coins/:id`
 - Method: `GET`
