@@ -50,9 +50,37 @@ npm start
 - Body:
 
 ```JSON
-{
-
-}
+[
+  {
+  "ath": 1234.56,
+  "ath_change_percentage": 12.34,
+  "ath_date": "2022-01-01",
+  "atl": 10.0,
+  "atl_change_percentage": 50.0,
+  "atl_date": "2022-01-01",
+  "circulating_supply": 1000000,
+  "current_price": 123.45,
+  "fully_diluted_valuation": 9876543210,
+  "high_24h": 130.0,
+  "id": "bitcoin",
+  "image": "https://example.com/bitcoin.png",
+  "last_updated": "2022-01-01T12:34:56Z",
+  "low_24h": 120.0,
+  "market_cap": 1234567890,
+  "market_cap_change_24h": 1234567,
+  "market_cap_change_percentage_24h": 1.23,
+  "market_cap_rank": 1,
+  "max_supply": 21000000,
+  "name": "Bitcoin",
+  "price_change_24h": -5.67,
+  "price_change_percentage_24h": -4.56,
+  "roi": null,
+  "symbol": "BTC",
+  "total_supply": 21000000,
+  "total_volume": 98765432
+  },
+  // ...
+]
 ```
 
 ### Item Detail
@@ -64,9 +92,45 @@ npm start
 - Body:
 
 ```JSON
-{
-
-}
+{"id": "bitcoin",
+  "symbol": "BTC",
+  "name": "Bitcoin",
+  "image": {
+    "thumb": "https://example.com/bitcoin-thumb.png",
+    "small": "https://example.com/bitcoin-small.png",
+    "large": "https://example.com/bitcoin-large.png"
+  },
+  "description": {
+    "en": "Description in English",
+    "es": "Descripción en Español"
+  },
+  "market_data": {
+    "ath": {
+      "usd": 1234.56,
+      "eur": 987.65
+    },
+    "atl": {
+      "usd": 10.0,
+      "eur": 7.89
+    },
+    "market_cap": {
+      "usd": 1234567890,
+      "eur": 987654321
+    },
+    "total_volume": {
+      "usd": 98765432,
+      "eur": 7654321
+    },
+    "current_price": {
+      "usd": 123.45,
+      "eur": 98.76
+    },
+    "price_change_percentage_24h": -4.56,
+    "price_change_percentage_7d": -2.34,
+    "price_change_percentage_30d": 1.23,
+    "price_change_percentage_1y": 10.0,
+    "market_cap_rank": 1
+  }}
 ```
 
 ## Scripts
