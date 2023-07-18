@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://raw.githubusercontent.com/martinbobbio/app-challenge-lemon/master/src/assets/images/..." width="200">
+  <img src="https://raw.githubusercontent.com/martinbobbio/app-challenge-lemon/master/assets/images/lemon-logo.png" width="200">
   <br>
   <a href="https://backend-challenge-lemon.vercel.app/">
   Challenge Lemon - Backend
@@ -31,21 +31,13 @@ git clone https://github.com/martinbobbio/backend-challenge-lemon
 npm install
 ```
 
-3. Create a .env file in the root directory of the project and add the following environment variables:
-
-```plaintext
-PORT=<port-number>
-```
-
-Replace <port-number> with the desired port number for the server to run on (e.g., 3000).
-
-4. Start the server
+3. Start the server
 
 ```bash
 npm start
 ```
 
-5. The API will be accessible at http://localhost:<port-number>/api.
+4. The API will be accessible at http://localhost:3000/api.
 
 ### Item List
 
@@ -53,8 +45,8 @@ npm start
 - Method: `GET`
 - Description: Getting currencies list information from the Coingecko API based on search parameters.
 - Query Parameters:
-- - `?` (Required) ...
-- - `?` (Optional) ...
+- - `search` (Optional) This parameter is for a filter and searching in the API.
+- - `ids` (Optional) This parameter is similar to the previous but only filter.
 - Body:
 
 ```JSON
@@ -68,9 +60,6 @@ npm start
 - URL: `/api/coins/:id`
 - Method: `GET`
 - Description: Getting item detail information from the Coingecko API based on the item ID.
-- Query Parameters:
-- - `?` (Required) ...
-- - `?` (Optional) ...
 
 - Body:
 
