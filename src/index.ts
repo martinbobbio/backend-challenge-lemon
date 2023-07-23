@@ -14,7 +14,6 @@ import { health } from "./controllers";
 
 // Init
 dotenv.config();
-console.log(JSON.stringify(process.env.API_URL_COINGECKO));
 const app = express();
 const port = process.env.PORT;
 
