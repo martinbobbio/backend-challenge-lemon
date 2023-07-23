@@ -4,6 +4,8 @@ import { Request, Response } from "express";
 import { apiCoingecko } from "../../constants";
 // Console colors
 import chalk from "chalk";
+// Axios
+import { AxiosError } from "axios";
 
 /**
  * Controller for retrieving coin list information from API of coingecko.
@@ -42,8 +44,10 @@ export const getCoinList = async (req: Request, res: Response) => {
       res.status(200).json(coinsList);
     }
   } catch (error) {
+    const axiosError = error as AxiosError;
+    const statusCode = axiosError.response?.status || 500;
     console.error(chalk.redBright(`Error searching the item list ${error}`));
-    res.status(500).json({ error: "Error searching the item list" });
+    res.status(statusCode).json({ error: "Error searching the item list" });
   }
 };
 
@@ -72,9 +76,13 @@ export const getCoinDetail = async (req: Request, res: Response) => {
     );
     res.status(200).json(coinsList);
   } catch (error) {
+    const axiosError = error as AxiosError;
+    const statusCode = axiosError.response?.status || 500;
     console.error(
       chalk.redBright(`Error searching the item detail ${id} - ${error}`)
     );
-    res.status(500).json({ error: `Error searching the item detail ${id}` });
+    res
+      .status(statusCode)
+      .json({ error: `Error searching the item detail ${id}` });
   }
 };
